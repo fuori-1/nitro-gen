@@ -1,0 +1,215 @@
+/*********************************************
+
+GEN AI
+
+*********************************************/
+
+.gen-ai{
+    background-color: var(--c2dark);
+    padding-right: 10%;
+}
+
+.gen-ai-config{
+    padding-top: 30px;
+}
+
+.gen-ai-config #gen-ai-focus{
+    width: 250px;
+    border: 1px solid #6a6a6a;
+    background: url(../images/alpha-channel.jpg);
+    background-size: contain;
+    float: left;
+}
+
+.gen-ai-config h1{
+    font-size: 30px;
+    color: var(--color);
+}
+
+.gen-ai-config h2{
+    font-size: 20px;
+    letter-spacing: 1;
+    color: var(--c1light);
+}
+
+.gen-ai-config p{
+    color: var(--c2light);
+    line-height: 1.2 !important;
+}
+
+.gen-ai-config small{ 
+    color: var(--c1light);
+    font-size: 10px; 
+    text-transform: uppercase; 
+    letter-spacing: 2;
+    padding-bottom: 10px;
+    line-height: 1.2 !important;
+}
+
+.gen-ai-config strong{
+    line-height: 3 !important;
+    color: var(--c1light);
+    font-size: 12px;
+    letter-spacing: 2;
+    text-transform: uppercase;
+}
+
+.gen-ai-config input{
+    padding-left: 10px;
+    border: 0;
+    border-radius: 0;
+    background-color: #6a6a6a;
+    color: wheat;
+    font-size: 16px;
+}
+
+.gen-ai-config .imagine{
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    width: 120px;
+    height: 120px;
+    color: var(--c2light);
+    background: linear-gradient(145deg, var(--color), var(--c2dark), var(--c1dark));
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2;
+    border-radius: 100px;
+    border: 1px solid var(--color);
+    transition: color 0.5s ease-in-out;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    right: 20px;
+}
+
+.gen-ai-config .imagine:hover{
+    color: var(--color);
+    background: linear-gradient(145deg, var(--c2dark), #000000);
+}
+
+.gen-ai-config .imagine i{ font-size: 60px; }
+.gen-ai-config .imagine span{ margin-top: 30px; }
+
+.clr-field { display: inherit !important; }
+.clr-field input{ 
+    text-transform: uppercase; 
+    border: 0;
+    border-radius: 0;
+}
+.clr-field button { width: 200px !important; }
+
+#gen-ai-model{ 
+    width: 100%; 
+    border: 1px solid #6a6a6a;
+}
+
+@media (orientation: portrait) {
+    .gen-ai{
+        background-color: var(--c2dark);
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .gen-ai-config{
+        padding-top: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .gen-ai-config .imagine{
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        top: inherit;
+        bottom: -10;
+        right: 10;
+    }
+
+    .gen-ai-config .imagine i{ font-size: 40px; }
+}
+
+/*********************************************
+
+GENERATIVE ART
+
+*********************************************/
+
+.generative-art{
+    width: 100vh !important;
+    height: 100vh !important;
+}
+
+.generative-art canvas{ 
+    height: 100vh;
+}
+
+.generative-art .swiper-button-next, .swiper-button-prev{
+    color: var(--c1light) !important;
+    background-color: var(--c1dark);
+    border-radius: 20px;
+}
+
+.generative-art .swiper-button-next:after{ font-size: 12px; }
+.generative-art .swiper-button-prev:after{ font-size: 12px; }
+.generative-art .swiper-pagination-bullet{ background: white !important; }
+.generative-art .swiper-pagination-bullet-active{ background-color: var(--color) !important; }
+
+.layer1 { position: absolute; z-index: 7; }
+.layer2 { position: absolute; z-index: 6; }
+.layer3 { position: absolute; z-index: 5; }
+.layer4 { position: absolute; z-index: 4; }
+.layer5 { position: absolute; z-index: 3; }
+.layer6 { position: absolute; z-index: 2; }
+.layer7 { z-index: 1; }
+
+.generative-art-save{
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+}
+
+.generative-art-save button{
+    background-color: var(--c2dark);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-bottom-left-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.generative-art-save button:hover{
+    background-color: var(--c1dark);
+}
+
+.generative-art-save i{
+    font-size: 30px;
+    color: var(--c2light);
+}
+
+.generative-art-save small{
+    font-size: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2;
+    text-transform: uppercase;
+    padding-top: 0;
+    color: var(--c2light);
+}
+
+@media (orientation: portrait) {
+    .generative-art{
+        position: absolute;
+        width: 350 !important;
+        height: 380px !important;
+    }
+
+    .generative-art canvas{ 
+        height: 350px;
+    }
+}

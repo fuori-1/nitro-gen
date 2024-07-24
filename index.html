@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>GEN ART</title>
+
+        <link rel="stylesheet" href="https://markett-opensource.github.io/davinci/davinci.min.css">
+        <link rel="stylesheet" href="ui.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="gen/jquery.3.7.1.min.js"></script>
+
+        <!-- coloris -->
+        <link rel="stylesheet" href="coloris/coloris.min.css">
+        <script src="coloris/coloris.min.js"></script>
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="swiper11.1.4/swiper-bundle.min.css">
+        <script src="swiper11.1.4/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+
+        <!-- ///////////////////////// LOADING
+    /////////////////////////////////////////////// -->
+        <div id="loading" class="loading-dark">
+            <div class="lds-ripple">
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+        <!-- ///////////////////////// ARTBOARDS & UI
+    /////////////////////////////////////////////// -->
+        <section class="gen-ai column-2" id="genAI">
+            <div>
+                <div class="swiper generative-art">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="artboard">
+                                <canvas id="layer1P1" class="layers layer1"></canvas>
+                                <canvas id="layer2P1" class="layers layer2"></canvas>
+                                <canvas id="layer3P1" class="layers layer3"></canvas>
+                                <canvas id="layer4P1" class="layers layer4"></canvas>
+                                <canvas id="layer5P1" class="layers layer5"></canvas>
+                                <canvas id="layer6P1" class="layers layer6"></canvas>
+                                <canvas id="layer7P1" class="layers layer7"></canvas>
+                            </div>
+
+                            <div class="generative-art-save">
+                                <button onclick="renderPost1();">
+                                    <i class="ph-thin ph-image"></i>
+                                    <small>salvar</small>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="artboard">
+                                <canvas id="layer1P2" class="layers layer1"></canvas>
+                                <canvas id="layer2P2" class="layers layer2"></canvas>
+                                <canvas id="layer3P2" class="layers layer3"></canvas>
+                                <canvas id="layer4P2" class="layers layer4"></canvas>
+                                <canvas id="layer5P2" class="layers layer5"></canvas>
+                                <canvas id="layer6P2" class="layers layer6"></canvas>
+                                <canvas id="layer7P2" class="layers layer7"></canvas>
+                            </div>
+
+                            <div class="generative-art-save">
+                                <button onclick="renderPost2();">
+                                    <i class="ph-thin ph-image"></i>
+                                    <small>salvar</small>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="artboard">
+                                <canvas id="layer1P3" class="layers layer1"></canvas>
+                                <canvas id="layer2P3" class="layers layer2"></canvas>
+                                <canvas id="layer3P3" class="layers layer3"></canvas>
+                                <canvas id="layer4P3" class="layers layer4"></canvas>
+                                <canvas id="layer5P3" class="layers layer5"></canvas>
+                                <canvas id="layer6P3" class="layers layer6"></canvas>
+                                <canvas id="layer7P3" class="layers layer7"></canvas>
+                            </div>
+
+                            <div class="generative-art-save">
+                                <button onclick="renderPost3();">
+                                    <i class="ph-thin ph-image"></i>
+                                    <small>salvar</small>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- navigation buttons -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+
+            <div class="gen-ai-config">
+                <div>
+                    <h1 class="title">Arte Generativa</h1>
+                    <h2 class="subtitle">
+                        Aperte no botão <i class="ph-thin ph-cube-focus"></i> para gerar uma arte
+                    </h2>
+                    <div class="space30h"></div>
+                </div>
+
+                <form id="gen-ai-create">
+                    <button class="imagine" type="submit">
+                        <i class="ph-thin ph-cube-focus"></i>
+                    </button>
+
+                    <strong>imagem em destaque</strong>
+                    <div class="column-2">
+                        <div>
+                            <img src="models/fallback.png" id="gen-ai-focus">
+                        </div>
+
+                        <div>
+                            <small>Resolução: <br>1080x1080 (SQUARE 1:1)</small>
+                            <small>IMAGEM: <br>1/1</small>
+                        </div>
+                    </div>
+                    <div class="space30h"></div>
+
+                    <!--
+                <strong>TEXTO DA ARTE</strong>
+                <input type="text" id="text" value="Funcionalidade disponível em breve..." disabled/>
+                <div class="space30h"></div>
+                -->
+
+                    <strong>CORES</strong>
+                    <div class="gen-ai-config-inputs">
+                        <input type="text" id="input1" data-coloris value="#CDFD02"/>
+                        <div class="space10h"></div>
+
+                        <input type="text" id="input2" data-coloris value="#252530"/>
+                        <div class="space10h"></div>
+
+                        <input type="text" id="input3" data-coloris value="#b3b3b3"/>
+                        <div class="space10h"></div>
+                    </div>
+                    <div class="space30h"></div>
+
+                    <strong>ESTILO VISUAL</strong>
+                    <img src="models/thumb-diffusion.png" id="gen-ai-model">
+                    <div class="space20h"></div>
+                    <h1 class="title">Diffusion</h1>
+                    <div class="space10h"></div>
+                    <p>
+                        Modelo generativo inspirado na cultura pop dos anos 2000, 
+                        que combina elementos de vaporwave com o estilo visual 
+                        das redes sociais. Utiliza o máximo da paleta de cores escolhida, 
+                        cria gradientes em múltiplos ângulos e incorpora detalhes 
+                        vetoriais em perspectiva.
+                    </p>
+
+                    <div class="space20h"></div>
+                    <!--<a class="btn">Mudar estilo</a>-->
+                </form>
+                <div class="space60h"></div>
+            </div>
+        </section>
+
+        <!-- ///////////////////////// GEN AI MODEL
+    /////////////////////////////////////////////// -->
+        <script type="text/javascript" src="models/diffusion/diffusion.js"></script>
+
+        <!-- ///////////////////////// SCRIPTS
+    /////////////////////////////////////////////// -->
+        <script type="text/javascript" src="gen/gen-layers.js"></script>
+        <script type="text/javascript" src="gen/gen-focus.js"></script>
+        <script type="text/javascript" src="gen/gen-art.js"></script>
+        <script type="text/javascript" src="gen/gen-render.js"></script>
+        <script type="text/javascript" src="gen/gen-slides.js"></script>
+
+    </body>
+</html>
