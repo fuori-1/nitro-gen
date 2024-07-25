@@ -14,7 +14,7 @@ var selectedColor3 = localStorage.getItem('color3');
 ///////////////////////////////////////////////
 
 aiDetails = 100;
-aiDetailsFolder = "models/diffusion/diffusion-svg/";
+aiDetailsFolder = "https://fuori-1.github.io/nitro-gen/models/diffusion/diffusion-svg/";
 
 ////////////////////////////////////////////////
 
