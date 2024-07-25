@@ -76,7 +76,7 @@ function randomBlendMode() {
 blendMode = randomBlendMode();
 
 aiBackgrounds = 111;
-aiBackgroundsFolder = "models/diffusion/diffusion-jpg/";
+aiBackgroundsFolder = "https://fuori-1.github.io/nitro-gen/models/diffusion/diffusion-jpg/";
 aiBackgroundPost1 = Math.ceil(Math.random() * aiBackgrounds);
 aiBackgroundPost2 = Math.ceil(Math.random() * aiBackgrounds);
 aiBackgroundPost3 = Math.ceil(Math.random() * aiBackgrounds);
