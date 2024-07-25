@@ -3,15 +3,6 @@
 // GEN AI CREATE
 
 ///////////////////////////////////////////////
-
-Coloris({ themeMode: "dark", alpha: false });
-$(window).on("load", function () {
-    $(".lds-ripple").fadeOut(function () {
-        $("#loading").slideToggle(500, function () {});
-    });
-});
-
-
 if (localStorage.getItem('color1')) {
     document.getElementById('input1').value = localStorage.getItem('color1');
 }
@@ -42,7 +33,6 @@ document.getElementById('gen-ai-create').addEventListener('submit', function(eve
 // MATH RANDOM COLORS 
 
 ///////////////////////////////////////////////
-
 var originalColor = [selectedColor1, selectedColor2, selectedColor3];
 var aiColor = originalColor.slice();
 for (var i = 0; i < 4; i++) {
