@@ -69,6 +69,7 @@ genPD(6, 'P3', aiDetail2_P3, aiDetail2_P3_PosX, aiDetail2_P3_PosY, aiColor[5], "
 function genPD(layer, postNumber, detailNumber, detailPosX, detailPosY, detailColor, detailOpacity) {
     var artboardLayer = "layer" + layer + postNumber;
     var detail = new Image();
+    detail.crossOrigin = "anonymous";
     detail.src = aiDetailsFolder + detailNumber + ".svg";
 
     detail.onload = function () {
@@ -81,8 +82,9 @@ function genPD(layer, postNumber, detailNumber, detailPosX, detailPosY, detailCo
         redrawVector.fillStyle = detailColor;
         redrawVector.globalCompositeOperation = 'source-in';
         redrawVector.fillRect(0, 0, canvas.width, canvas.height);
-    }
+    };
 }
+
 
 ////////////////////////////////////////////////
 
@@ -96,6 +98,7 @@ genPB(3, aiBackgroundPost3, backgroundP3);
 
 function genPB(id, backgroundNumber, layerType) {
     var image = new Image();
+    image.crossOrigin = "anonymous";
     image.src = aiBackgroundsFolder + backgroundNumber + ".jpg";
 
     image.onload = function () {
@@ -103,7 +106,7 @@ function genPB(id, backgroundNumber, layerType) {
         layerType.globalAlpha = 0.6;
         layerType.drawImage(image, 0, 0);
         layerType.globalCompositeOperation = 'destination-over';
-    }
+    };
 }
 
 ////////////////////////////////////////////////

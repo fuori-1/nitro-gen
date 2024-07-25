@@ -2,7 +2,7 @@ var swiper = new Swiper(".generative-art", {
     loop: false,
 
     autoplay: {
-        delay: 3000, 
+        delay: 6000, 
         disableOnInteraction: false, 
     },
 
