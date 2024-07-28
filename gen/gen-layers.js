@@ -44,38 +44,38 @@ setLayerDimensions(layersP3, postCanvasX, postCanvasY);
 // CREATE CONTEXT 2D - STORIES
 
 ///////////////////////////////////////////////
-var contextVariables = [];
+// var contextVariables = [];
 
-for (var i = 1; i <= 3; i++) {
-    for (var j = 1; j <= 7; j++) {
-        var layer = window[`layer${j}S${i}`];
-        contextVariables.push(layer.getContext('2d'));
-    }
-}
+// for (var i = 1; i <= 3; i++) {
+//     for (var j = 1; j <= 7; j++) {
+//         var layer = window[`layer${j}S${i}`];
+//         contextVariables.push(layer.getContext('2d'));
+//     }
+// }
 
-var [logoS1, fxS1, textS1, focusS1, detail1S1, detail2S1, backgroundS1,
-    logoS2, fxS2, textS2, focusS2, detail1S2, detail2S2, backgroundS2,
-    logoS3, fxS3, textS3, focusS3, detail1S3, detail2S3, backgroundS3] = contextVariables;
+// var [logoS1, fxS1, textS1, focusS1, detail1S1, detail2S1, backgroundS1,
+//     logoS2, fxS2, textS2, focusS2, detail1S2, detail2S2, backgroundS2,
+//     logoS3, fxS3, textS3, focusS3, detail1S3, detail2S3, backgroundS3] = contextVariables;
 
 ////////////////////////////////////////////////
 
 // CREATE STORY LAYERS
 
 ///////////////////////////////////////////////
-function setLayerDimensions(layers, width, height) {
-    layers.forEach(layer => {
-        layer.width = width;
-        layer.height = height;
-    });
-}
+// function setLayerDimensions(layers, width, height) {
+//     layers.forEach(layer => {
+//         layer.width = width;
+//         layer.height = height;
+//     });
+// }
 
-var storyCanvasX = 1080;
-var storyCanvasY = 1920;
+// var storyCanvasX = 1080;
+// var storyCanvasY = 1920;
 
-var layersS1 = [layer1S1, layer2S1, layer3S1, layer4S1, layer5S1, layer6S1, layer7S1];
-var layersS2 = [layer1S2, layer2S2, layer3S2, layer4S2, layer5S2, layer6S2, layer7S2];
-var layersS3 = [layer1S3, layer2S3, layer3S3, layer4S3, layer5S3, layer6S3, layer7S3];
+// var layersS1 = [layer1S1, layer2S1, layer3S1, layer4S1, layer5S1, layer6S1, layer7S1];
+// var layersS2 = [layer1S2, layer2S2, layer3S2, layer4S2, layer5S2, layer6S2, layer7S2];
+// var layersS3 = [layer1S3, layer2S3, layer3S3, layer4S3, layer5S3, layer6S3, layer7S3];
 
-setLayerDimensions(layersS1, storyCanvasX, storyCanvasY);
-setLayerDimensions(layersS2, storyCanvasX, storyCanvasY);
-setLayerDimensions(layersS3, storyCanvasX, storyCanvasY);
+// setLayerDimensions(layersS1, storyCanvasX, storyCanvasY);
+// setLayerDimensions(layersS2, storyCanvasX, storyCanvasY);
+// setLayerDimensions(layersS3, storyCanvasX, storyCanvasY);
